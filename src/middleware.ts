@@ -3,7 +3,7 @@ import { getUrl } from "./app/_lib/get-url";
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get(
-    process.env.SESSION_COOKIE_NAME || "authenticationjs.session-token"
+    process.env.SESSION_COOKIE_NAME || "authenticationjs.session-token",
   );
   const pathname = request.nextUrl.pathname;
 
