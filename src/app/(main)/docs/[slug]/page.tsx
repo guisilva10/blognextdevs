@@ -7,7 +7,7 @@ export default async function DocPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const slug = await params;
+  const slug = (await params).slug;
   const doc = {
     title: "Introduction",
     content: `
